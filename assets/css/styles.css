@@ -1,0 +1,94 @@
+:root{
+    --height_header:80px;
+    --color_principal:white;
+    --color_secundario:#daeada;
+    --color_letras:#1a3e1a;
+    --color_negro:#212529;
+    --padding_navegacion: 40px;
+}
+@font-face {
+    font-family: 'Font principal';
+    src: url(../myriad-pro/MYRIADPRO-BOLD.OTF);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--color_secundario);
+}
+
+.header {
+    height: var(--height_header);
+    color: var(--color_letras);
+    font-family: 'Font principal';
+}
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    padding: var(--padding_navegacion);
+}
+.brand {
+    font-size: 25px;
+}
+
+.label_hamburguesa {
+    color: #1a3e1a;
+    cursor: pointer;
+}
+.menu_hamburguesa {
+    display: none;
+}
+.menu_hamburguesa:checked + .list{
+    height: calc(50vh - var(--height_header));
+}
+.list {
+    background-color: var(--color_negro);
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: var(--height_header);
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    left: 0;
+    transition: 2s;
+}
+.ul_list {
+}
+.links {
+    color: white;
+    text-decoration: none;
+}
+@media (min-width:900px) {
+    .links{
+        color: var(--color_letras);
+    }
+}
+@media (min-width: 769px) {
+    .label_hamburguesa{
+        display: none;
+    }
+    .list{
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        background-color: var(--color_secundario);
+    }
+    
+}
+.card-body:hover{
+    background-color: #212529;
+    color: white;
+}

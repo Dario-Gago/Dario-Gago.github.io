@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darío Gago</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <h1 class="brand">Darío Gago</h1>
+            <label for="menu_hamburguesa" class="label_hamburguesa"> <img src="assets/images/menu.png" alt="Boton de menu"></label>
+            <input type="checkbox" class="menu_hamburguesa" id="menu_hamburguesa">
+            <ul class="list">
+                <li class="ul_list"><a class="links" href="#section2">Sobre mí</a></li>
+                <li class="ul_list"><a class="links" href="#4to">Proyectos</a></li>
+                <li class="ul_list"><a class="links" href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main >
+        <section class="d-flex justify-content-around align-items-center">
+            <img id="image_dario" class="w-25 rounded" src="assets/images/otro.jpg" alt="Imagen de Darío">
+            <div>
+                <h2 class="dario_gago">Darío Gago</h2>
+                <h6>Desarrollador frontend y backend, especializado en Javascript </h6>
+            </div>
+        </section>
+        <h2 class="text-center my-5">Acerca de mí</h2>
+
+        <section class="row bg-dark text-white justify-content-between g-0 text-center py-5" id="section2">
+            <div class="col-md-3">
+                <img class="w-25" src="assets/images/html.png" alt="">
+                <h3>Html</h2>
+                <h4>Tengo conocimientos avanzado en html sé para que se usa cada etiqueta.</h4>
+            </div>
+            <div class="col-md-3">
+                <img class="w-25" src="assets/images/css.png" alt="">
+                <h3>Css</h2>
+                <h4>Tengo conocimientos intermedios en css conozco como funciona el modelo de cajas etc...</h4>
+            </div>
+            <div class="col-md-3">
+                <img class="w-25" src="assets/images/javascript.png" alt="">
+                <h3>Javascript</h2>
+                <h4>Tengo conocimientos básicos en Javascript, conozco las funciones y las condicionales.</h4>
+            </div>
+            <div>
+                <img src="assets/images/Captura de pantalla 2024-08-12 175342.png" alt="" class="w-50">
+                <h4 class="my-5" id="4to">Tengo 4to medio terminado y me encanta la tecnología desde pequeño mostré interés hacia los computadores.</h4>
+            </div>
+        </section>
+        <h2 class="text-center my-5">Proyectos</h2>
+
+        <section id="proyectos" class="row justify-content-center g-0">
+            <div class="card m-4" style="width: 18rem;">
+                <img src="./assets/images/Proyecto1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Portafolio</h5>
+                  <p class="card-text">En este proyecto utilizamos las etiquetas de html como por ejemplo img, ul, ol etc...</p>
+                  <a href="#" class="btn btn-danger">Ir a proyecto</a>
+                </div>
+              </div>
+              <div class="card m-4" style="width: 18rem;">
+                <img src="./assets/images/Proyecto2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Landing Page</h5>
+                  <p class="card-text">En este proyecto hicimos una página que teníamos que mostrar al menos 3 productos.</p>
+                  <a href="#" class="btn btn-primary">Ir a proyecto</a>
+                </div>
+              </div>
+              <div class="card m-4" style="width: 18rem;">
+                <img src="./assets/images/Proyecto3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Iguana Page</h5>
+                  <p class="card-text">En este proyecto tuvimos que recrear una página de iguanas, utilizando css.</p>
+                  <a href="#" class="btn btn-warning">Ir a proyecto</a>
+                </div>
+              </div>
+        </section>
+        <section id="contacto">
+            <div class="container mt-5">
+                <h2 class="text-center">Contactame</h2>
+                <form action="form.php" method="get">
+                    <div class="mb-3">
+                        <label for="email" class="form-label"name="" >Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Escribe tu mensaje aquí"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <hr>
+    <footer class="justify-content-around d-flex">
+        <h6>© 2024 Dario Gago</h6>
+        <div>
+            <a href="#" class="text-dark"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-dark"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-dark"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
