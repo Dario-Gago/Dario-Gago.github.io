@@ -256,6 +256,7 @@ main > h1{
 .instagram { background: #e4405f; }
 .linkedin { background: #0077b5; }
 .youtube { background: #cd201f; }
+.cv { background: #000000; }
 
 /* Hover */
 .social-link:hover {
