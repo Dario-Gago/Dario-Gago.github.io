@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chokokutai&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Itim&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Playwrite+HR+Lijeva:wght@100..400&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Wet+Paint&family=Zen+Maru+Gothic&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: aliceblue;
+  }
+  
+  .menu {
+    justify-content: flex-end; /* Alinea todo a la derecha */
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: relative;
+
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #29a114;
+    display: block;
+    padding: 10px 20px;
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .menu a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+  }
+  
+  /* Ícono del menú */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: auto; /* Empuja el ícono a la derecha */
+  }
+  
+  .bar {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  /* Lista del menú (escondida por defecto) */
+  .menu-list {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    right: 0px; /* Posición fija a la derecha */
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  
+  .menu-list li {
+    list-style: none;
+    
+  }
+  
+  /* Mostrar lista cuando está activa */
+  .menu-list.active {
+    position: static;
+    display: flex;
+  }
+  
+  
+@media (min-width: 765px) {
+  .menu{
+    position: static;
+    justify-content: center;
+  }
+  .bar{
+    width: auto;
+  }
+  .menu-list{
+    display: flex;
+    position: static;
+    flex-direction: row;
+    width: auto;
+    justify-content: center;
+  }
+  .menu-toggle{
+    display: none;
+  }
+}
+
+
+main > h1{
+  text-align: center;
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.img {
+  text-align: center; /* Opcional si el contenido no es flex */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  margin: auto;
+  background-color: white;
+  height: 300px; /* Define una altura específica para el contenedor */
+  border: solid 2px #333;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../images/mat.gif');
+  background-position: center;
+}
+
+.img > img {
+  max-width: 100%; /* La imagen no excede el ancho del contenedor */
+  max-height: 40%; /* Evita que la imagen ocupe todo el alto */
+  height: auto; /* Mantiene la proporción original */
+  border-radius: 10px; 
+  border: solid 3px aliceblue;
+
+}
+.img > h2{
+  color: #29a114;
+  background-color: aliceblue;
+  text-transform: uppercase;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 20px 20px 50px 10px rgba(0, 0, 0, 0.7);
+}
+.img-2 {
+  text-align: center; /* Opcional si el contenido no es flex */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  margin: auto;
+  background-color: white;
+  height: 300px; /* Define una altura específica para el contenedor */
+  border: solid 2px #333;
+  background-size: 100%;
+  background-position: center;
+  view-timeline-name: --reveal;
+  animation-name: show;
+  animation-fill-mode: both;
+  view-timeline: --reveal;
+  animation-range: entry 25% cover 50%;
+
+}
+
+.img-2 > img {
+  max-width: 100%; /* La imagen no excede el ancho del contenedor */
+  max-height: 40%; /* Evita que la imagen ocupe todo el alto */
+  height: auto; /* Mantiene la proporción original */
+  border-radius: 10px; 
+  border: solid 3px aliceblue;
+
+}
+
+.img-2 > a{
+  color: #29a114;
+  text-decoration: none;
+  font-size: 26px;
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+@media (min-width: 765px) {
+  .img{
+    height: 450px;
+  }
+  .img > img{
+    max-height: 60%;
+  }
+}
+
+.triangle-container{
+  display: flex;
+}
+.img-3 {
+  text-align: center; /* Opcional si el contenido no es flex */
+  width: 80%;
+  gap: 2em;
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  margin: auto;
+  background-color: white;
+  height: 300px; /* Define una altura específica para el contenedor */
+  border: solid 2px #333;
+  background-size: 100%;
+  background-position: center;
+
+}
+
+.img-3 > img {
+  max-width: 100%; /* La imagen no excede el ancho del contenedor */
+  max-height: 40%; /* Evita que la imagen ocupe todo el alto */
+  height: auto; /* Mantiene la proporción original */
+  border-radius: 10px; 
+  border: solid 3px aliceblue;
+  
+
+}
+.triangle-container > img{
+  width: 20%;
+}
+
+
+.contact-socials {
+  text-align: center;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-socials h2 {
+  margin-bottom: 20px;
+  color: #444;
+  font-size: 1.8rem;
+}
+
+/* Íconos */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+/* Colores específicos */
+.facebook { background: #3b5998; }
+.twitter { background: #55acee; }
+.instagram { background: #e4405f; }
+.linkedin { background: #0077b5; }
+.youtube { background: #cd201f; }
+
+/* Hover */
+.social-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
